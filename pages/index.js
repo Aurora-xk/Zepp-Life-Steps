@@ -240,7 +240,7 @@ const Home = () => {
     <div className={`app-container ${darkMode ? 'dark-mode' : ''}`}>
       <Head>
         <title>小米运动步数修改器</title>
-        <meta name="description" content="轻松修改小米运动步数，支持随机生成和历史记录" />
+        <meta name="description" content="一键修改小米运动步数，可同步至微信" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -293,7 +293,7 @@ const Home = () => {
         <div className="glass-card main-card">
           <div className="card-header">
             <Title level={2} className="glass-title">小米运动步数修改器</Title>
-            <Text className="glass-subtitle">轻松修改小米运动步数，支持随机生成和历史记录</Text>
+            <Text className="glass-subtitle">一键修改小米运动步数，可同步至微信</Text>
           </div>
           
           <Tabs activeKey={activeTab} onChange={setActiveTab} className="glass-tabs">
@@ -633,30 +633,5 @@ const Home = () => {
           />
         </div>
       </Modal>
-
-      <Modal
-        title="微信小程序"
-        open={showQRCode}
-        onCancel={() => setShowQRCode(false)}
-        footer={[
-          <Button key="close" onClick={() => setShowQRCode(false)}>
-            关闭
-          </Button>
-        ]}
-        width={300}
-        className="glass-modal"
-      >
-        <div className="qrcode-container">
-          <img 
-            src="https://cdn.jsdelivr.net/gh/miloce/Zepp-Life-Steps/img/MiniProgramCode.png" 
-            alt="微信小程序二维码" 
-            className="qrcode-image"
-          />
-          <Text>扫描二维码使用微信小程序版本</Text>
-        </div>
-      </Modal>
-    </div>
-  );
-};
 
 export default Home; 
